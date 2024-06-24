@@ -1,3 +1,49 @@
-body {
-    background-color: skyblue;
+html,body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #1E1E1E ;
+
+}
+
+h1{
+    color: white;
+    text-transform: uppercase;
+    padding: 50px 0;
+    font-size: 3em;
+    font-weight: lighter;
+}
+
+p{
+    color: white;
+}
+
+/* PROFILE */
+.profileMain{
+    height: 60vh;
+    width: 100%;
+}
+.profileDescription{
+    background: #262424;
+    height: 100%;
+    width: 60%;
+    border-radius: 20px;
+}
+
+.profileImageMain{
+    width: 30%;
+    height: 100%;
+}
+
+.profileImage{
+    background: white;
+    height: 45%;
+    width: 100%;
+    border-radius: 20px;
+}
+.profileSubImage{
+    background: #262424;
+    height: 45%;
+    width: 100%;
+    border-radius: 20px;
 }
