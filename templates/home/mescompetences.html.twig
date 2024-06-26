@@ -6,11 +6,12 @@
         <div class="skillsRect">
             <h2>Front-end</h2>
             <div class="d-flex">
-
-                <div class="skillBadge mx-4 py-2">
-                    <h3>HTML</h3>
-                </div>
-
+                {% for skill in skills %}
+                    <div class="skillBadge mx-4 py-2">
+                        <h3>{{ skill.name }}</h3>
+                    </div>
+                {% endfor %}
+            </div>
             </div>
         </div>
 

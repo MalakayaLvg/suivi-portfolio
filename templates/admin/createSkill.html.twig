@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Skill{% endblock %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+{% block body %}
+
+    <div class="bg-light my-5">
+        {{ form_start(form) }}
+        {{ form_row(form.name) }}
+        <button type="submit" class="btn btn-success">create</button>
+        {{ form_end(form) }}
+    </div>
+
+
+
+{% endblock %}

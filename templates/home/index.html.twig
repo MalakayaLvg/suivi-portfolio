@@ -3,6 +3,7 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+    <a class="btn btn-primary" href="{{ path("app_admin") }}">Page admin</a>
     {% include "home/profil.html.twig" %}
     {% include "home/mescompetences.html.twig" %}
     {% include "home/projects.html.twig" %}
