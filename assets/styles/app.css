@@ -9,18 +9,38 @@ html,body {
 h1{
     color: white;
     text-transform: uppercase;
-    padding: 50px 0;
+    padding: 200px 0 100px 0;
     font-size: 3em;
     font-weight: lighter;
 }
 
+h2{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: normal;
+    padding-bottom: 40px ;
+}
+
+h3{
+    font-family: "Poppins", SansSerif;
+    font-weight: 400;
+}
+
+h4{
+    color: white;
+    padding: 50px;
+}
+
 p{
     color: white;
+    padding: 2rem;
 }
 
 /* PROFILE */
 .profileMain{
-    height: 60vh;
+    height: 70vh;
     width: 100%;
 }
 .profileDescription{
@@ -40,10 +60,146 @@ p{
     height: 45%;
     width: 100%;
     border-radius: 20px;
+
+    img{
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
 }
 .profileSubImage{
     background: #262424;
     height: 45%;
     width: 100%;
     border-radius: 20px;
+}
+
+/*MES COMPETENCES*/
+.skillsRect{
+    height: 50vh;
+    width: 100%;
+    background: #262424;
+    padding: 2em;
+    border-radius: 20px;
+}
+
+.skillBadge{
+    background-color: #F3CCCC;
+    border: #FF6767 1px solid;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+
+
+    h3{
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+/*MES PROJETS*/
+.projectsMainBlock{
+    position: relative;
+    height: 50vh;
+    width: 80%;
+    background: #F3CCCC;
+    border: #FF6767 2px solid ;
+    padding: 60px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.projectNameText{
+    width: 100%;
+    height: 10%;
+
+    h3{
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #393939;
+    }
+}
+
+.projectDateBadge{
+    position: absolute;
+    bottom: -21px;
+    left: 170px;
+    background-color: #FF6767 ;
+    border-radius: 30px;
+    width: 10vw;
+    padding: 10px 0;
+
+    span{
+        color: white;
+    }
+
+}
+
+.projectImage{
+    width: 100%;
+    height: 90%;
+
+    a img{
+        object-fit: cover;
+    }
+}
+
+/*ME CONTACTER*/
+
+.contactMain{
+    height: 80vh;
+    width: 100%;
+    padding: 0 150px;
+}
+
+.contactRectEmail{
+    background-color: #262424;
+    border-radius: 20px;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.contactEmailBadge{
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 10px;
+    margin: 20px 0 50px 0;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.contactEmailBadge:hover {
+    background-color: rgba(147, 147, 147, 0.77);
+}
+
+.contactSocialMedia{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+.badgeSocialMedia{
+    background-color: #262424;
+    border-radius: 30px;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    margin: 0 0.7em;
+    transition: 0.2s;
+}
+.badgeSocialMedia:hover{
+    background-color: rgba(58, 54, 54, 0.75);
 }
