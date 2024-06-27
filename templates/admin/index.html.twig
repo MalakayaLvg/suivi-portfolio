@@ -9,17 +9,21 @@
     <h2>Mes compétences</h2>
 
     <div class="skillsMain row">
-
+        {% for category in skillCategories %}
         <div class="col-6">
             <div class="skillsRect">
-                <h2>Front-end</h2>
+                <div class="skillCategoryBadgeAdmin">
+                    <a class=" badge rounded-pill text-bg-danger" href="{{ path("app_delete_skill_category",{id:category.id}) }}"><i class="bi bi-trash"></i></a>
+                    <a class="badge rounded-pill text-bg-warning" href="{{ path("app_edit_skill_category",{id:category.id}) }}"><i class="bi bi-pen"></i></a>
+                </div>
+                <h2>{{ category.name }}</h2>
                 <div class="d-flex">
-                    {% for skill in skills %}
+                    {% for skill in category.skill %}
                     <div class="skillBadge mx-4 py-2">
                         <h3>{{ skill.name }}</h3>
-                        <div class="badgeAdmin">
-                            <a class=" badge rounded-pill text-bg-danger" href="{{ path("app_delete_skill") }}"><i class="bi bi-trash"></i></a>
-                            <a class="badge rounded-pill text-bg-warning" href="{{ path("app_edit_skill") }}"><i class="bi bi-pen"></i></a>
+                        <div class="skillBadgeAdmin">
+                            <a class=" badge rounded-pill text-bg-danger" href="{{ path("app_delete_skill",{id:skill.id}) }}"><i class="bi bi-trash"></i></a>
+                            <a class="badge rounded-pill text-bg-warning" href="{{ path("app_edit_skill",{id:skill.id}) }}"><i class="bi bi-pen"></i></a>
                         </div>
                     </div>
                     {% endfor %}
@@ -27,9 +31,9 @@
             </div>
 
         </div>
-
+        {% endfor %}
     </div>
-
+    <a class="btn btn-success" href="{{ path("app_create_skill_category") }}">create skillCategory</a>
     <a class="btn btn-success" href="{{ path("app_create_skill") }}">create skill</a>
 
 {% endblock %}

@@ -2,30 +2,24 @@
 
 namespace App\Form;
 
-use App\Entity\Skill;
 use App\Entity\SkillCategory;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class SkillType extends AbstractType
+class SkillCategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('name')
-            ->add('skillCategory', EntityType::class, [
-                'class'=>SkillCategory::class,
-                'choice_label'=>'name',
-            ])
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Skill::class,
+            'data_class' => SkillCategory::class,
         ]);
     }
 }

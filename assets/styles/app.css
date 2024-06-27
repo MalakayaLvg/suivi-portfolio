@@ -213,7 +213,8 @@ p{
 
 /*SKILLS*/
 
-.badgeAdmin{
+.skillBadgeAdmin{
     position: absolute;
     bottom: -10px;
 }
+

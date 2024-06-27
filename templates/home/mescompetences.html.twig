@@ -2,19 +2,28 @@
 
 <div class="skillsMain row">
 
-    <div class="col-6">
-        <div class="skillsRect">
-            <h2>Front-end</h2>
-            <div class="d-flex">
-                {% for skill in skills %}
-                    <div class="skillBadge mx-4 py-2">
-                        <h3>{{ skill.name }}</h3>
-                    </div>
-                {% endfor %}
+    {% for category in skillCategories %}
+        <div class="col-6">
+            <div class="skillsRect">
+{#                <div class="skillCategoryBadgeAdmin">#}
+{#                    <a class=" badge rounded-pill text-bg-danger" href="{{ path("app_delete_skill_category",{id:category.id}) }}"><i class="bi bi-trash"></i></a>#}
+{#                    <a class="badge rounded-pill text-bg-warning" href="{{ path("app_edit_skill_category",{id:category.id}) }}"><i class="bi bi-pen"></i></a>#}
+{#                </div>#}
+                <h2>{{ category.name }}</h2>
+                <div class="d-flex">
+                    {% for skill in category.skill %}
+                        <div class="skillBadge mx-4 py-2">
+                            <h3>{{ skill.name }}</h3>
+{#                            <div class="skillBadgeAdmin">#}
+{#                                <a class=" badge rounded-pill text-bg-danger" href="{{ path("app_delete_skill",{id:skill.id}) }}"><i class="bi bi-trash"></i></a>#}
+{#                                <a class="badge rounded-pill text-bg-warning" href="{{ path("app_edit_skill",{id:skill.id}) }}"><i class="bi bi-pen"></i></a>#}
+{#                            </div>#}
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
-            </div>
-        </div>
 
-    </div>
+        </div>
+    {% endfor %}
 
 </div>

@@ -6,12 +6,9 @@
 
     <div class="bg-light my-5">
         {{ form_start(form) }}
-        {{ form_row(form.name) }}
-        {{ form_row(form.skillCategory) }}
-        <button type="submit" class="btn btn-success">create</button>
+        {{ form_row(form.name, {"attr":{"value":skill.name}}) }}
+        <button type="submit" class="btn btn-warning">edit</button>
         {{ form_end(form) }}
     </div>
-
-
 
 {% endblock %}
